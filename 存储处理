@@ -1,0 +1,10 @@
+1、解压不要查看显示详情：避免时间影响解压
+tar xf 
+
+2、安装
+nohub sh install  &
+
+3、手动修改rk3588网速
+  #config to 1G
+echo 1000 > /sys/devices/platform/fe1c0000.ethernet/mdio_bus/stmmac-1/stmmac-1\:01/set_1000bx
+echo 1000 > /sys/devices/platform/fe1b0000.ethernet/mdio_bus/stmmac-0/stmmac-0\:01/set_1000bx
